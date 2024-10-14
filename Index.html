@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Clandestina - Treinos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo gym.png" alt=logo gym.png class="logo" width="250" height="250">
+            <h1>Bem-vindo à Academia Clandestina</h1>
+            <p>Selecione o dia da semana e inicie o seu treino</p>
+        </header>
+
+        <main>
+            <form id="treinoForm">
+                <label for="dia">Escolha o dia:</label>
+                <select id="dia" name="dia" required>
+                    <option value="">Selecione...</option>
+                    <option value="segunda">Segunda-feira</option>
+                    <option value="terca">Terça-feira</option>
+                    <option value="quarta">Quarta-feira</option>
+                    <option value="quinta">Quinta-feira</option>
+                    <option value="sexta">Sexta-feira</option>
+                </select>
+                <button type="submit">Iniciar Treino</button>
+            </form>
+
+            <section id="treinos" style="display: none;">
+                <!-- Treinos irão aparecer aqui -->
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('treinoForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const diaSelecionado = document.getElementById('dia').value;
+            const treinos = {
+                'segunda': `
+                    <h2>Segunda-feira - Treino de Perna</h2>
+                    <ul>
+                        <li class="grande">Leg Press</li>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rCjsHW7nVNA" frameborder="0" allowfullscreen> </iframe> 
+                        <li class="grande">Afundo</li>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kRjLoBo3yZE" frameborder="0" allowfullscreen> </iframe>
+                        <li class="grande">Elevaçao Panturrilha</li>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/7bb5JMJFfVU" frameborder="0" allowfullscreen> </iframe>
+                        <li class="grande">Cadeira Extensora</li>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/k8YcmOUljqA" frameborder="0" allowfullscreen> </iframe>
+                        <li class="grande">Cadeira Flexora</li>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/F4SVKdDGQy4" frameborder="0" allowfullscreen> </iframe>
+                        <li class="grande">Sumo Deadlift</li>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rIx5O1jRJ2c" frameborder="0" allowfullscreen> </iframe>
+                        <li class="grande">Step-up</li>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iNWKCuqowAM" frameborder="0" allowfullscreen> </iframe>
+                        <li class="grande">Agachamento Bulgaro</li>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/5P4kh_4sRkI" frameborder="0" allowfullscreen> </iframe>
+
+                    </ul>`,
+                    
+                'terca': `
+                    <h2>Terça-feira - Treino de Peito</h2>
+                    <ul>
+                        <li>Supino Reto</li>
+                             i
+                        <li>Crucifixo <a href="https://www.youtube.com/watch?v=0G2_XV7slIg" target="_blank">Ver Vídeo</a></li>
+                        <li>Flexão de Braço <a href="https://www.youtube.com/watch?v=IODxDxX7oi4" target="_blank">Ver Vídeo</a></li>
+                        <li>Supino Inclinado <a href="https://www.youtube.com/watch?v=0G2_XV7slIg" target="_blank">Ver Vídeo</a></li>
+                        <li>Crucifixo Inclinado <a href="https://www.youtube.com/watch?v=LptUS0RuAqw" target="_blank">Ver Vídeo</a></li>
+                        <li>Peck Deck <a href="https://www.youtube.com/watch?v=Iwe6AmxVf7o" target="_blank">Ver Vídeo</a></li>
+                        <li>Chest Press <a href="https://www.youtube.com/watch?v=gRVjAtPip0Y" target="_blank">Ver Vídeo</a></li>
+                        <li>Crossover <a href="https://www.youtube.com/watch?v=bDaIL_zKbGs" target="_blank">Ver Vídeo</a></li>
+                        <li>Flexão com Pegada Fechada <a href="https://www.youtube.com/watch?v=9lH5avfwfsM" target="_blank">Ver Vídeo</a></li>
+                        <li>Fly no Cabo <a href="https://www.youtube.com/watch?v=IKH37hFPpFg" target="_blank">Ver Vídeo</a></li>   
+                    </ul>`,
+                'quarta': `
+                    <h2>Quarta-feira - Treino de Costas</h2>
+                    <ul>
+                        <li>Barra Fixa <a href="https://www.youtube.com/watch?v=bSsPaSKj0B4" target="_blank">Ver Vídeo</a></li>
+                        <li>Remada Curvada <a href="https://www.youtube.com/watch?v=roCP6wCXPqo" target="_blank">Ver Vídeo</a></li>
+                        <li>Puxada na Polia <a href="https://www.youtube.com/watch?v=CAwf7n6Luuc" target="_blank">Ver Vídeo</a></li>
+                        <li>Remada Cavalinho <a href="https://www.youtube.com/watch?v=n1d8vxz3zUo" target="_blank">Ver Vídeo</a></li>
+                        <li>Levantamento Terra <a href="https://www.youtube.com/watch?v=op9kVnSso6Q" target="_blank">Ver Vídeo</a></li>
+                        <li>Serrote <a href="https://www.youtube.com/watch?v=pYcpY20QaE8" target="_blank">Ver Vídeo</a></li>
+                        <li>Puxada Aberta <a href="https://www.youtube.com/watch?v=DoIXHWqE0ZQ" target="_blank">Ver Vídeo</a></li>
+                        <li>Remada Baixa <a href="https://www.youtube.com/watch?v=LktZbTSbgC8" target="_blank">Ver Vídeo</a></li>
+                        <li>Encolhimento <a href="https://www.youtube.com/watch?v=q0rFddr-Xu0" target="_blank">Ver Vídeo</a></li>
+                        <li>Remada Unilateral <a href="https://www.youtube.com/watch?v=YXkx-Z7LT18" target="_blank">Ver Vídeo</a></li>
+                    </ul>`,
+                'quinta': `
+                    <h2>Quinta Feira - Treino de Ombro</h2>
+                    <ul>
+                        <li>Desenvolvimento Militar <a href="https://www.youtube.com/watch?v=2yjwXTZQDDI" target="_blank">Ver Vídeo</a></li>
+                        <li>Elevação Lateral <a href="https://www.youtube.com/watch?v=kDqklk1ZESo" target="_blank">Ver Vídeo</a></li>
+                        <li>Elevação Frontal <a href="https://www.youtube.com/watch?v=-t7fuZ0KhDA" target="_blank">Ver Vídeo</a></li>
+                        <li>Elevação Posterior <a href="https://www.youtube.com/watch?v=vB5OHsJ3EME" target="_blank">Ver Vídeo</a></li>
+                        <li>Desenvolvimento Arnold <a href="https://www.youtube.com/watch?v=v6EtLfZZ2pY" target="_blank">Ver Vídeo</a></li>
+                        <li>Elevação Lateral Unilateral <a href="https://www.youtube.com/watch?v=IQuz88kVe7g" target="_blank">Ver Vídeo</a></li>
+                        <li>Crucifixo Inverso <a href="https://www.youtube.com/watch?v=bBYsJdQv9_c" target="_blank">Ver Vídeo</a></li>
+                        <li>Remada Alta <a href="https://www.youtube.com/watch?v=zOabqZhybT4" target="_blank">Ver Vídeo</a></li>
+                        <li>Desenvolvimento com Barra <a href="https://www.youtube.com/watch?v=JCXUYuzwNrM" target="_blank">Ver Vídeo</a></li>
+                    </ul>`,
+                'sexta': `
+                    <h2>Sexta-feira - Treino de Braço</h2>
+                    <ul>
+                        <li>Rosca Direta <a href="https://www.youtube.com/watch?v=mrI-RNnU2aM" target="_blank">Ver Vídeo</a></li>
+                        <li>Rosca Alternada <a href="https://www.youtube.com/watch?v=2vcneZLZ6FQ" target="_blank">Ver Vídeo</a></li>
+                        <li>Tríceps Pulley <a href="https://www.youtube.com/watch?v=UeTYZ8ukMRM" target="_blank">Ver Vídeo</a></li>
+                        <li>Tríceps Francês <a href="https://www.youtube.com/watch?v=ehQ5nd5pswY" target="_blank">Ver Vídeo</a></li>
+                        <li>Rosca Martelo <a href="https://www.youtube.com/watch?v=Z94peOaEnu8" target="_blank">Ver Vídeo</a></li>
+                        <li>Tríceps Testa <a href="https://www.youtube.com/watch?v=9vJxv2w6_Uc" target="_blank">Ver Vídeo</a></li>
+                        <li>Rosca Scott <a href="https://www.youtube.com/watch?v=0sG_kakq2pE" target="_blank">Ver Vídeo</a></li>
+                        <li>Tríceps Coice <a href="https://www.youtube.com/watch?v=wPQqkgvC8vM" target="_blank">Ver Vídeo</a></li>
+                        <li>Rosca Concentrada <a href="https://www.youtube.com/watch?v=SM6s72zHf0Y" target="_blank">Ver Vídeo</a></li>
+                        <li>Tríceps Corda <a href="https://www.youtube.com/watch?v=K2j9wHUSY6A" target="_blank">Ver Vídeo</a></li>
+                    </ul>`,
+            };
+
+            const treinosSection = document.getElementById('treinos');
+            treinosSection.innerHTML = treinos[diaSelecionado];
+            treinosSection.style.display = 'block';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background: linear-gradient(to bottom, orange, white);
+    text-align: center; /* Opcional, ajusta o texto no centro */
+    padding: 25px; /* Ajuste para espaçamento interno */
+  }
+.hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out; visibility: 0s 1s;
+}
+.grande {
+  font-size: 24px;
+  font-weight: bold; /* Se quiser deixar o texto em negrito também */
+}
+
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-in-out;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: 20px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+
+button {
+  background-color: #fcad03;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:houver {
+  background-color: darkorange;
+}
+  h1 {
+    margin: 0;
+  }
+  
+  main {
+    margin: 20px;
+  }
+  
+  h2 {
+    color: #fcad03;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+  }
+  
+  a {
+    color: #008CBA;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
