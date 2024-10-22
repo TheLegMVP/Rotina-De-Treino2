@@ -9,7 +9,7 @@ body {
   header {
     background: linear-gradient(to bottom, orange, white);
     text-align: center; /* Opcional, ajusta o texto no centro */
-    padding: 25px; /* Ajuste para espaçamento interno */
+    padding: 50px; /* Ajuste para espaçamento interno */
   }
 .hidden {
   display: none;
